@@ -554,16 +554,16 @@ video {
   top: 100vh;
 }
 
+.block {
+  display: block;
+}
+
 .inline-block {
   display: inline-block;
 }
 
 .flex {
   display: flex;
-}
-
-.table {
-  display: table;
 }
 
 .h-12 {
@@ -630,6 +630,16 @@ video {
 
 .border-t-transparent {
   border-top-color: transparent;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-purple-700 {

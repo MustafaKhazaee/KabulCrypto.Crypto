@@ -5,6 +5,14 @@ VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KabulCrypto.Crypto.Client", "KabulCrypto.Crypto\Client\KabulCrypto.Crypto.Client.csproj", "{8285679C-3DBA-4567-900E-B0794A06BE78}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KabulCrypto.Crypto.GrpcService", "KabulCrypto.Crypto.GrpcService\KabulCrypto.Crypto.GrpcService.csproj", "{97D2813C-8690-4D03-AC82-4AD62227E4B0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KabulCrypto.Crypto.Application", "KabulCrypto.Crypto.Application\KabulCrypto.Crypto.Application.csproj", "{65F86CFE-FE3A-4E73-9917-B6347ADD9C77}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KabulCrypto.Crypto.Infrastructure", "KabulCrypto.Crypto.Infrastructure\KabulCrypto.Crypto.Infrastructure.csproj", "{BF139AC2-6B10-40B6-80BB-C8522CA468AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KabulCrypto.Crypto.Domain", "KabulCrypto.Crypto.Domain\KabulCrypto.Crypto.Domain.csproj", "{B67B3D8E-E03C-42B9-BAC6-B4C2A42535FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{8285679C-3DBA-4567-900E-B0794A06BE78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8285679C-3DBA-4567-900E-B0794A06BE78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8285679C-3DBA-4567-900E-B0794A06BE78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97D2813C-8690-4D03-AC82-4AD62227E4B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D2813C-8690-4D03-AC82-4AD62227E4B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D2813C-8690-4D03-AC82-4AD62227E4B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D2813C-8690-4D03-AC82-4AD62227E4B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65F86CFE-FE3A-4E73-9917-B6347ADD9C77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65F86CFE-FE3A-4E73-9917-B6347ADD9C77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65F86CFE-FE3A-4E73-9917-B6347ADD9C77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65F86CFE-FE3A-4E73-9917-B6347ADD9C77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF139AC2-6B10-40B6-80BB-C8522CA468AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF139AC2-6B10-40B6-80BB-C8522CA468AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF139AC2-6B10-40B6-80BB-C8522CA468AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF139AC2-6B10-40B6-80BB-C8522CA468AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B67B3D8E-E03C-42B9-BAC6-B4C2A42535FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B67B3D8E-E03C-42B9-BAC6-B4C2A42535FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B67B3D8E-E03C-42B9-BAC6-B4C2A42535FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B67B3D8E-E03C-42B9-BAC6-B4C2A42535FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

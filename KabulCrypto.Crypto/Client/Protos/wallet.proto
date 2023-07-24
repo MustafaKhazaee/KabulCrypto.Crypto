@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "KabulCrypto.Crypto.Client.Protos";
+
+package wallet;
+
+service Wallet {
+	rpc GetWallets (GetWalletsRequest) returns (GetWalletsResponse);
+}
+
+message GetWalletsRequest { }
+
+message GetWalletsResponse {
+	repeated string wallets = 1;
+}

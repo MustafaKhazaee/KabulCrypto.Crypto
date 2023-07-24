@@ -1,46 +1,27 @@
 ﻿@page "/fetchdata"
-@inject HttpClient Http
+@inject Protos.Wallet.WalletClient walletClient;
 
 <PageTitle>Weather forecast</PageTitle>
 
-<h1>Weather forecast</h1>
+<h1 class="text-lg">Wallets From GRPC</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
-
-@*@if (forecasts == null)
+@foreach (var w in wallets)
 {
-    <p><em>Loading...</em></p>
-}*@
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @*@foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }*@
-        </tbody>
-    </table>
+    <h2 class="text-2xl">@(Counter++) : @w</h2>
 }
 
 @code {
-    //private WeatherForecast[]? forecasts;
 
-    //protected override async Task OnInitializedAsync()
-    //{
-    //    forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
-    //}
+    private int Counter { set; get; } = 1;
+
+    private List<string> wallets { set; get; } = new List<string>();
+
+    protected async override Task OnInitializedAsync ()
+    {
+        var response = await walletClient.GetWalletsAsync(new GetWalletsRequest());
+
+        this.wallets = response.Wallets.Select(i => i).ToList();
+
+        return;
+    }
 }
