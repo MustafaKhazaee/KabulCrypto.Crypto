@@ -550,10 +550,6 @@ video {
   position: sticky;
 }
 
-.bottom-0 {
-  bottom: 0px;
-}
-
 .top-\[100vh\] {
   top: 100vh;
 }
@@ -602,10 +598,6 @@ video {
   width: 100vw;
 }
 
-.flex-grow {
-  flex-grow: 1;
-}
-
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -638,10 +630,6 @@ video {
 
 .border-t-transparent {
   border-top-color: transparent;
-}
-
-.align-middle {
-  vertical-align: middle;
 }
 
 .text-purple-700 {
