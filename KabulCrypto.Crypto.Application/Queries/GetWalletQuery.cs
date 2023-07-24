@@ -11,20 +11,18 @@ namespace KabulCrypto.Crypto.Application.Queries
 
     public class GetWalletQueryResponse : IRequestHandler<GetWalletQuery, List<string>>
     {
-        private readonly IApplicationDbContext _context;
+        private readonly IRepository<Wallet> _walletRepository;
 
-        public GetWalletQueryResponse(IApplicationDbContext context)
+        public GetWalletQueryResponse(IRepository<Wallet> walletRepository)
         {
-            _context = context;
+            _walletRepository = walletRepository;
         }
 
         public async Task<List<string>> Handle(GetWalletQuery request, CancellationToken cancellationToken)
         {
-            var walletDbSet = _context.Set<Wallet>();
+            var wallets = await _walletRepository.Queryable.ToListAsync(cancellationToken); 
 
-            var wallets = await walletDbSet.ToListAsync(cancellationToken); 
-
-            return walletDbSet.Select(w => w.Name).ToList();
+            return wallets.Select(w => w.Name).ToList();
         }
     }
 }

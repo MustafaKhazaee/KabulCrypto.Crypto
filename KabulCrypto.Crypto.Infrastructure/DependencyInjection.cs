@@ -1,4 +1,5 @@
-﻿using KabulCrypto.Crypto.Domain.Interfaces;
+﻿using KabulCrypto.Crypto.Domain.Common;
+using KabulCrypto.Crypto.Domain.Interfaces;
 using KabulCrypto.Crypto.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -20,5 +21,7 @@ public static class DependencyInjection
 
             ServiceLifetime.Scoped        
         );
+
+        services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
     }
 }
