@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>KabulCrypto</title>
+        <base href="/" />
+        <link rel="stylesheet" href="output.css" />
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link href="manifest.json" rel="manifest" />
+        <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
+        <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
+    </head>
+
+    <body>
+        <div id="app">
+            <div class="flex h-screen justify-center items-center">
+                <div class="animate-spin inline-block w-20 h-20 border-[3px] border-current border-t-transparent text-purple-700 rounded-full"
+                     role="status" aria-label="loading">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+        <script src="_framework/blazor.webassembly.js"></script>
+        <script>navigator.serviceWorker.register('service-worker.js');</script>
+    </body>
+
+</html>

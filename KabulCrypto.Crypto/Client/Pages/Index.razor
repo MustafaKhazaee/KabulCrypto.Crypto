@@ -1,0 +1,32 @@
+﻿@page "/"
+@using KabulCrypto.Crypto.Client.Pages.Wallet;
+
+<PageTitle>Index</PageTitle>
+
+<div class="h-screen w-screen">
+    <div class="w-full flex justify-center">
+        <DynamicComponent Type="@selectedRoute">
+
+        </DynamicComponent>
+    </div>
+    <div class="h-12 w-full flex justify-center sticky top-[100vh]">
+        <div class="inline-block h-full w-1/4 flex justify-center items-center">
+            <button @onclick='() => ChangeRoute(typeof(Counter))'>@nameof(Counter)</button>
+        </div>
+        <div class="inline-block h-full w-1/4 flex justify-center items-center">
+            <button @onclick='() => ChangeRoute(typeof(FetchData))'>@nameof(FetchData)</button>
+        </div>
+        <div class="inline-block h-full w-1/4 flex justify-center items-center">
+            <button @onclick='() => ChangeRoute(typeof(Wallets))'>@nameof(Wallets)</button>
+        </div>
+        <div class="inline-block h-full w-1/4 flex justify-center items-center">
+            <button @onclick='() => ChangeRoute(typeof(FetchData))'>@nameof(FetchData)</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    private Type selectedRoute { set; get; } = typeof(Counter);
+
+    private void ChangeRoute(Type route) => selectedRoute = route;
+}
