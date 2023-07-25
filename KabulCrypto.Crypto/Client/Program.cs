@@ -13,7 +13,7 @@ namespace KabulCrypto.Crypto.Client
 
             builder.RootComponents.Add<HeadOutlet>("head::after");
 
-            builder.Services.AddClient(builder.Configuration);
+            builder.Services.RegisterServices(builder.Configuration);
 
             await builder.Build().RunAsync();
         }

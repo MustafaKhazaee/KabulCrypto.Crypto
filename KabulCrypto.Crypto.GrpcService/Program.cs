@@ -1,7 +1,5 @@
 
 using KabulCrypto.Crypto.GrpcService.Services;
-using KabulCrypto.Crypto.Application;
-using KabulCrypto.Crypto.Infrastructure;
 
 namespace KabulCrypto.Crypto.GrpcService
 {
@@ -11,21 +9,7 @@ namespace KabulCrypto.Crypto.GrpcService
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddGrpc();
-
-            builder.Services.AddApplication(builder.Configuration);
-            builder.Services.AddInfrastructure(builder.Configuration);
-
-            var frontendUrl = builder.Configuration.GetValue<string>("FrontendURL");
-
-            builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
-            {
-                builder
-                    .WithOrigins(frontendUrl!)
-                    .AllowAnyMethod()
-                    .AllowAnyHeader()
-                    .AllowCredentials();
-            }));
+            builder.Services.RegisterServices(builder.Configuration);
 
             var app = builder.Build();
 

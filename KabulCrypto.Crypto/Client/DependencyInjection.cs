@@ -5,7 +5,7 @@ namespace KabulCrypto.Crypto.Client
 {
     public static class DependencyInjection
     {
-        public static void AddClient (this IServiceCollection services, IConfiguration configuration)
+        public static void RegisterServices (this IServiceCollection services, IConfiguration configuration)
         {
             var backendUrl = configuration.GetValue<string>("BackendURL");
 
